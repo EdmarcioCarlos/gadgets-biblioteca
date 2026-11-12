@@ -1,0 +1,107 @@
+<title>BLACK BIRD Gadgets</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: cabeçalho curto + atalhos + grade de projetos por nível (mesmo visual escuro das prévias) */
+:root{
+  --bg:#0e1113; --panel:#161a1d; --line:#262c30; --text:#d6dcdf; --muted:#8a959b;
+  --accent:#9cc35a; --amber:#e2b04a; --coyote:#8a6a45;
+  --f-body:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --f-mono:Consolas,"SFMono-Regular",Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font:15px/1.55 var(--f-body)}
+.wrap{max-width:1080px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.tag{color:var(--accent);font:600 12px/1 var(--f-mono);letter-spacing:.18em;text-transform:uppercase}
+h1{margin:.45em 0 .2em;font-size:clamp(26px,4vw,34px);line-height:1.15;text-wrap:balance}
+h1 b{color:var(--coyote)}
+.sub{color:var(--muted);margin:0;max-width:68ch}
+.atalhos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:22px}
+.atalho{display:flex;flex-direction:column;gap:2px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-decoration:none;color:var(--text);min-width:0}
+.atalho b{font-size:15px}
+.atalho span{color:var(--muted);font-size:12.5px}
+.atalho.principal{border-color:var(--accent)}
+.atalho.principal b{color:var(--accent)}
+.atalho:hover,.atalho:focus-visible,.card:hover,.card:focus-visible{border-color:var(--accent);outline:none}
+.filtro{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:30px}
+.filtro label{color:var(--muted);font-size:12.5px}
+#busca{flex:1 1 220px;min-width:0;max-width:360px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+#busca:focus{outline:2px solid var(--accent);outline-offset:1px}
+h2{display:flex;gap:10px;align-items:baseline;font-size:17px;margin:30px 0 10px}
+h2 .nivel{color:var(--amber);font:600 12px var(--f-mono);letter-spacing:.12em}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;color:var(--text);min-width:0}
+.card .foto{aspect-ratio:16/10;background:#f4f4f2;display:flex;align-items:center;justify-content:center;max-width:100%}
+.card .foto img{width:100%;height:100%;object-fit:contain;padding:8px}
+.card .txt{display:flex;flex-direction:column;gap:4px;padding:10px 12px 12px}
+.card .topo{display:flex;gap:8px;align-items:baseline}
+.card .num{font:600 13px var(--f-mono);color:var(--accent);font-variant-numeric:tabular-nums}
+.card .nome{font-weight:700}
+.card p{margin:0;color:var(--muted);font-size:13px}
+.card .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.chip{font:600 10.5px var(--f-mono);letter-spacing:.06em;padding:2px 7px;border-radius:20px;border:1px solid var(--line);color:var(--muted)}
+.chip.rifle{color:var(--amber);border-color:var(--amber)}
+.vazio{color:var(--muted);display:none}
+footer{margin-top:40px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:14px}
+@media (prefers-reduced-motion:no-preference){.card,.atalho{transition:border-color .15s}}
+</style>
+
+<div class="wrap">
+  <div class="tag">BLACK BIRD | DMR · GADGETS</div>
+  <h1>Gadgets <b>BLACK BIRD</b></h1>
+  <p class="sub">Todos os projetos de Arduino e ESP32 para o airsoft num lugar só, na ordem de dificuldade (do 01, mais fácil, ao 14). Cada cartão abre a prévia completa do projeto: desenhos em tamanho real, ligação elétrica, montagem e custo.</p>
+
+  <div class="atalhos">
+    <a class="atalho principal" href="PAINEL-ESTOQUE.html"><b>Painel de estoque →</b><span>o que já dá para montar e quanto falta gastar</span></a>
+    <a class="atalho" href="PREVIA-AEG/PREVIA.html"><b>Prévia no AEG →</b><span>os gadgets montados no Rossi MK16</span></a>
+    <a class="atalho" href="PREVIA-GERAL-LUNETA.html"><b>Luneta com os gadgets →</b><span>anti-cant (03) e telêmetro (12) juntos</span></a>
+    <a class="atalho" href="03-NIVEL-ANTI-CANT/3D/estilos/ESTILOS.html"><b>Estilos considerados →</b><span>como nasceu o estilo tático facetado</span></a>
+  </div>
+
+  <div class="filtro">
+    <label for="busca">Procurar projeto</label>
+    <input id="busca" type="search" placeholder="ex.: rádio, luneta, bateria" autocomplete="off">
+  </div>
+
+  <h2><span class="nivel">NÍVEL 1</span>Iniciante</h2>
+  <div class="grade">
+    <a class="card" href="01-BOMBA-SEARCH-DESTROY/PREVIA.html"><div class="foto"><img src="01-BOMBA-SEARCH-DESTROY/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">01</span><span class="nome">Bomba Search &amp; Destroy</span></div><p>3 modos de desarme (senha, segurar, cortar o fio) e sirene de 110 dB.</p><div class="chips"><span class="chip">jogo</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="02-POWERBANK-TABLETS/PREVIA.html"><div class="foto"><img src="02-POWERBANK-TABLETS/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">02</span><span class="nome">Powerbank dos Tablets</span></div><p>3 baterias 18650 num cartucho de troca rápida e 2 saídas USB, preso no poste.</p><div class="chips"><span class="chip">jogo</span><span class="chip">sem código</span></div></div></a>
+    <a class="card" href="03-NIVEL-ANTI-CANT/PREVIA.html"><div class="foto"><img src="03-NIVEL-ANTI-CANT/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">03</span><span class="nome">Nível Anti-Cant</span></div><p>Sensor no trilho e 3 LEDs na luneta: verde nivelado, vermelho inclinado.</p><div class="chips"><span class="chip rifle">no rifle</span><span class="chip">código</span></div></div></a>
+  </div>
+
+  <h2><span class="nivel">NÍVEL 2</span>Intermediário</h2>
+  <div class="grade">
+    <a class="card" href="04-CRONOGRAFO/PREVIA.html"><div class="foto"><img src="04-CRONOGRAFO/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">04</span><span class="nome">Cronógrafo</span></div><p>2 barreiras infravermelhas: m/s, fps, joules e a consistência da série.</p><div class="chips"><span class="chip">bancada</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="05-AMPLIFICADOR-REDE/PREVIA.html"><div class="foto"><img src="05-AMPLIFICADOR-REDE/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">05</span><span class="nome">Amplificador de Rede</span></div><p>Rádio de longo alcance que liga os tablets do Battlefield sem roteador.</p><div class="chips"><span class="chip">jogo</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="06-ANPEQ-LASER/PREVIA.html"><div class="foto"><img src="06-ANPEQ-LASER/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">06</span><span class="nome">ANPEQ Laser Verde</span></div><p>Laser com torres de clique para pôr o ponto onde a BB bate.</p><div class="chips"><span class="chip rifle">no rifle</span><span class="chip">sem código</span></div></div></a>
+    <a class="card" href="07-SPEEDLOADER-ELETRICO/PREVIA.html"><div class="foto"><img src="07-SPEEDLOADER-ELETRICO/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">07</span><span class="nome">Speedloader Elétrico</span></div><p>Carrega o magazine contando cada BB e para sozinho na quantidade.</p><div class="chips"><span class="chip">bancada</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="08-GRANADA-SOM-LUZ/PREVIA.html"><div class="foto"><img src="08-GRANADA-SOM-LUZ/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">08</span><span class="nome">Granada de Som e Luz</span></div><p>Pino de puxar, estrobo de 4 LEDs e sirene; recarrega e arma de novo.</p><div class="chips"><span class="chip">jogo</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="09-ALVO-ACIONADOR/PREVIA.html"><div class="foto"><img src="09-ALVO-ACIONADOR/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">09</span><span class="nome">Alvo Acionador de Lâmpada</span></div><p>Acertou o alvo, o refletor de 127 V acende; depois 5 min de espera.</p><div class="chips"><span class="chip">jogo noturno</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="10-TRACANTE-SILENCIADOR/PREVIA.html"><div class="foto"><img src="10-TRACANTE-SILENCIADOR/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">10</span><span class="nome">Traçante no Silenciador</span></div><p>Cartucho com LEDs UV dentro do seu silenciador: a BB sai brilhando.</p><div class="chips"><span class="chip rifle">no rifle</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="11-SCANER-RADIO/PREVIA.html"><div class="foto"><img src="11-SCANER-RADIO/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">11</span><span class="nome">Scanner de Rádio UHF</span></div><p>Varre 400–464 MHz e vibra quando aparece canal novo. Só recebe.</p><div class="chips"><span class="chip">colete</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="12-TELEMETRO-ZONA-ENGAJAMENTO/PREVIA.html"><div class="foto"><img src="12-TELEMETRO-ZONA-ENGAJAMENTO/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">12</span><span class="nome">Telêmetro</span></div><p>Laser de 905 nm mede a distância e avisa alvo perto demais.</p><div class="chips"><span class="chip rifle">no rifle</span><span class="chip">código</span></div></div></a>
+  </div>
+
+  <h2><span class="nivel">NÍVEL 3</span>Avançado</h2>
+  <div class="grade">
+    <a class="card" href="13-CYBERDECK/PREVIA.html"><div class="foto"><img src="13-CYBERDECK/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">13</span><span class="nome">Cyberdeck BLACK BIRD</span></div><p>Maleta com Raspberry Pi, tela de 15,6″ e partida de caça para os jogos .py.</p><div class="chips"><span class="chip">base</span><span class="chip">código</span></div></div></a>
+    <a class="card" href="14-VISAO-NOTURNA/PREVIA.html"><div class="foto"><img src="14-VISAO-NOTURNA/3D/img/pecas.png" alt=""></div><div class="txt"><div class="topo"><span class="num">14</span><span class="nome">Visão Noturna Clip-on</span></div><p>Câmera infravermelha 1x na frente da luneta, com lanterna IR para 80 m.</p><div class="chips"><span class="chip rifle">no rifle</span><span class="chip">código</span></div></div></a>
+  </div>
+  <p class="vazio" id="vazio">Nenhum projeto com esse nome. Tente outra palavra.</p>
+
+  <footer>Os arquivos de impressão (STL) e os códigos (.ino) ficam na pasta GADGETS do seu PC; aqui estão as prévias, o painel e os textos de apoio.</footer>
+</div>
+
+<script>
+(function(){
+  var campo=document.getElementById('busca'), cards=[].slice.call(document.querySelectorAll('.card')), vazio=document.getElementById('vazio');
+  function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+  campo.addEventListener('input',function(){
+    var q=norm(campo.value.trim()), vis=0;
+    cards.forEach(function(c){ var ok=!q||norm(c.textContent).indexOf(q)>=0; c.hidden=!ok; if(ok) vis++; });
+    document.querySelectorAll('.grade').forEach(function(g){ var algum=[].some.call(g.children,function(c){return !c.hidden}); g.hidden=!algum; g.previousElementSibling.hidden=!algum; });
+    vazio.style.display=vis?'none':'block';
+  });
+})();
+</script>
